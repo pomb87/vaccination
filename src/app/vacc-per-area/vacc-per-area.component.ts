@@ -20,14 +20,13 @@ export class VaccPerAreaComponent implements OnInit {
   title = 'Übersicht der Impfungen pro Bundesland';
   datepipe: DatePipe = new DatePipe('en-US')
   currentDataDate: Date;
-  //added comment
 
   private getLastWeek() {
     var today = new Date();
     if (this.currentDataDate != null) {
-      // today = new Date(this.currentDataDate);
+      today = new Date(this.currentDataDate);
     }
-    var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 8);
+    var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 6);
     this.log("lastweek = " + lastWeek)
     return lastWeek;
   }

@@ -1,5 +1,13 @@
 # Vaccination
 
+Project shows the current data of vaccinations in Austria.
+Project was created with help of tutorial: https://angular.io/tutorial/
+
+# Installation
+bootstrap: ng add @ng-bootstrap/ng-bootstrap
+ngx-graph: npm install @swimlane/ngx-graph --save 'https://swimlane.github.io/ngx-graph/'
+npm install @angular/cdk --save -> needed for ngx-graph
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
 ## Development server

@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="card-body">
+        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" *ngFor="let entry of dataPerArea" class="justify-content-center">
+            <ngb-panel title={{entry.name}} style="max-width: 50vw !important;">
+                <ng-template ngbPanelContent class="text-center justify-content-center">
+                    <div class="row text-center justify-content-center paddingbottom">
+                        <h3>Verlauf der letzten <span class="badge badge-info">7 Tage</span></h3>
+                    </div>
+                    <div class="row text-center justify-content-center">
+                        <div class="graph">
+                            <ngx-charts-bar-vertical [results]="entry.graphdata" [xAxisLabel]="'Datum'" [legendTitle]="'Anzahl'" [yAxisLabel]="'Anzahl'" [legend]="false" [showXAxisLabel]="false" [showYAxisLabel]="false" [xAxis]="true" [yAxis]="true" [gradient]="true">
+                            </ngx-charts-bar-vertical>
+                        </div>
+                    </div>
+                    <div class="row text-center justify-content-center">
+                        <div class="paddingtop text-left">
+                            <p>
+                                <span class="label"> Aktuelle Daten vom: </span>
+                                <span class="output">{{entry.currentData.dateString}}</span>
+                            </p>
+
+                            <p>
+                                <span class="label"> Einwohner Anzahl: </span>
+                                <span class="output">{{entry.currentData.amountPeople}}</span>
+                            </p>
+                            <p>
+                                <span class="label"> Anzahl der registrierten Impfungen: </span>
+                                <span class="output">{{entry.currentData.registeredVaccinations}}</span>
+                            </p>
+                            <p>
+                                <span class="label"> Registrierte Impfungen pro 100 Einwohner: </span>
+                                <span class="output">{{entry.currentData.registeredVaccinationsPer100}}</span>
+                            </p>
+                            <p>
+                                <span class="label"> Anzahl der teil-geimpften Personen: </span>
+                                <span class="output">{{entry.currentData.partlyVaccined}}</span>
+                            </p>
+                            <p>
+                                <span class="label"> Teil-geimpften Personen pro 100 Einwohner: </span>
+                                <span class="output">{{entry.currentData.partlyVaccinedPer100}}</span>
+                            </p>
+                            <p>
+                                <span class="label"> Anzahl der voll-geimpften Personen: </span>
+                                <span class="output">{{entry.currentData.fullyVaccined}}</span>
+                            </p>
+                            <p>
+                                <span class="label"> Voll-geimpften Personen pro 100 Einwohner: </span>
+                                <span class="output">{{entry.currentData.fullyVaccinedPer100}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-panel>
+        </ngb-accordion>
+    </div>
+</div>

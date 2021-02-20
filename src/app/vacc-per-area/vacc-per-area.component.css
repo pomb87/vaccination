@@ -1,0 +1,52 @@
+.label {
+    font-family: 'Ubuntu', sans-serif;
+    color: #808080;
+}
+
+.output {
+    font-weight: bolder;
+    font-family: 'Source Code Pro', monospace;
+    color: #606060;
+}
+
+.paddingtop {
+    padding-top: 20px !important;
+}
+
+.paddingbottom {
+    padding-bottom: 20px !important;
+}
+
+@media(min-device-width: 900px) {
+    .paddingtop {
+        padding-top: 60px !important;
+    }
+    .label {
+        font-size: medium;
+    }
+    .output {
+        font-size: medium;
+    }
+}
+
+@media(max-device-width: 900px) {
+    .label {
+        font-size: small;
+    }
+    .output {
+        font-size: small;
+    }
+}
+
+@media(min-device-width: 900px) {
+    .graph {
+        min-width: 500px !important;
+    }
+}
+
+.graph {
+    max-width: 600px;
+    min-width: 200px;
+    max-height: 800px;
+    min-height: 400px;
+}

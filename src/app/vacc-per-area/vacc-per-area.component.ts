@@ -3,8 +3,7 @@ import { VaccinationService } from '../vaccination.service';
 import { MessageService } from '../message.service';
 import { VaccData } from '../vaccData';
 import { VaccDataEntry } from '../vaccData';
-import { VaccArea } from '../vaccArea';
-import { DataPerArea, DataPerAreaData } from '../dataPerArea';
+import { DataPerArea } from '../dataPerArea';
 import { DatePipe } from '@angular/common';
 
 @Component({
@@ -43,7 +42,7 @@ export class VaccPerAreaComponent implements OnInit {
       var dateB = new Date(b.Datum).getTime();
       return dateA > dateB ? -1 : 1;
     });
-    this.currentDataDate = input[1].Datum;
+    this.currentDataDate = input[0].Datum;
   }
 
   private sortGraphData(input: DataPerArea) {

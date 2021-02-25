@@ -7,16 +7,23 @@ export interface DataPerAge {
     group6: DataPerAgeData;
     group7: DataPerAgeData;
     group8: DataPerAgeData;
+    graph: GraphData[];
+    graph2: GraphData[];
 }
 
 export interface DataPerAgeData {
-    groupM: Number,
-    groupW: Number,
-    groupD: Number,
-    groupM2: Number,
-    groupW2: Number,
-    groupD2: Number,
-    groupAll: Number,
-    groupAll1: Number,
-    groupAll2: Number
+    groupM: number,
+    groupW: number,
+    groupD: number,
+    groupM2: number,
+    groupW2: number,
+    groupD2: number,
+    groupAll: number,
+    groupAll1: number,
+    groupAll2: number
+}
+
+export interface GraphData {
+    name: string;
+    value: Number;
 }

@@ -1,0 +1,11 @@
+.graph {
+    min-width: 500px !important;
+    min-height: 800px !important;
+}
+
+@media(max-device-width: 900px) {
+    .graph {
+        min-width: 86vw !important;
+        min-height: 800px !important;
+    }
+}
